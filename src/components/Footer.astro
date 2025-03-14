@@ -25,10 +25,8 @@ const today = new Date();
 				<li><i class="fas fa-map-marker-alt"></i> Montevideo, Uruguay</li>
 			</ul>
 		</div>
-	</div>
-	<div class="footer-bottom">
-		<p>&copy; {today.getFullYear()} UTU - DGETP. Todos los derechos reservados.</p>
-		<div class="social-links">
+		<div class="footer-section social-links">
+			<h3>Síguenos</h3>
 			<a href="https://facebook.com" target="_blank" rel="noopener">
 				<i class="fab fa-facebook"></i>
 				<span class="sr-only">Facebook</span>
@@ -46,6 +44,9 @@ const today = new Date();
 				<span class="sr-only">YouTube</span>
 			</a>
 		</div>
+	</div>
+	<div class="footer-bottom">
+		<p>&copy; {today.getFullYear()} UTU - DGETP. Todos los derechos reservados.</p>
 	</div>
 </footer>
 
@@ -97,11 +98,7 @@ const today = new Date();
 		margin: 2em auto 0;
 		padding: 2em 1em 0;
 		border-top: 1px solid rgba(var(--gray), 0.2);
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		flex-wrap: wrap;
-		gap: 1em;
+		text-align: center;
 	}
 
 	.social-links {

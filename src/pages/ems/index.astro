@@ -34,6 +34,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 </html>
 
 <style>
+	/* Estilos existentes */
 	.course-grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -48,20 +49,51 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 		box-shadow: var(--box-shadow);
 		text-decoration: none;
 		color: rgb(var(--gray-dark));
-		transition: transform 0.2s ease;
+		transition: transform 0.2s ease, box-shadow 0.2s ease;
 	}
 
 	.course-card:hover {
 		transform: translateY(-4px);
+		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 	}
 
 	.course-card h2 {
 		margin: 0 0 1rem 0;
 		color: var(--accent);
+		font-size: 1.5em;
 	}
 
 	.course-card p {
 		margin: 0;
 		font-size: 0.9em;
+	}
+
+	/* Nuevos estilos */
+	h1 {
+		font-size: 2.5em;
+		color: var(--primary);
+		text-align: center;
+		margin-top: 1rem;
+	}
+
+	body {
+		font-family: 'Arial', sans-serif;
+		background-color: #f9f9f9;
+		margin: 0;
+		padding: 0;
+	}
+
+	main {
+		padding: 2rem;
+	}
+
+	@media (max-width: 600px) {
+		.course-card {
+			padding: 1rem;
+		}
+
+		.course-card h2 {
+			font-size: 1.2em;
+		}
 	}
 </style>

@@ -133,6 +133,10 @@ hr {
 	main {
 		padding: 1em;
 	}
+	button {
+		width: 100%;
+		padding: 1em;
+	}
 }
 
 .sr-only {
@@ -151,4 +155,24 @@ hr {
 	clip-path: inset(50%);
 	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
 	white-space: nowrap;
+}
+
+button {
+	background-color: var(--accent);
+	color: white;
+	border: none;
+	padding: 0.75em 1.5em;
+	border-radius: 4px;
+	font-size: 1em;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+button:hover {
+	background-color: var(--accent-dark);
+}
+
+button:disabled {
+	background-color: rgb(var(--gray));
+	cursor: not-allowed;
 }

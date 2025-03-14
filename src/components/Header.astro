@@ -5,9 +5,12 @@ import { SITE_TITLE } from '../consts';
 
 <header>
 	<nav>
-		<h2><a href="/">{SITE_TITLE}</a></h2>
+		<div class="logo">
+			<img src="/src/components/logofinal3.webp" alt="UTU Logo" />
+			<h2><a href="/">{SITE_TITLE}</a></h2>
+		</div>
 		<div class="internal-links">
-			<HeaderLink href="/">Principal</HeaderLink>
+			<HeaderLink href="/">Inicio</HeaderLink>
 			<div class="dropdown">
 				<HeaderLink href="/ems">2° EMS</HeaderLink>
 				<div class="dropdown-content">
@@ -35,6 +38,17 @@ import { SITE_TITLE } from '../consts';
 		background: white;
 		box-shadow: 0 2px 8px rgba(var(--black), 5%);
 	}
+
+	.logo {
+		display: flex;
+		align-items: center;
+		gap: 0.5em;
+	}
+
+	.logo img {
+		height: 40px;
+	}
+
 	h2 {
 		margin: 0;
 		font-size: 1em;
@@ -44,17 +58,20 @@ import { SITE_TITLE } from '../consts';
 	h2 a.active {
 		text-decoration: none;
 	}
+
 	nav {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 	}
+
 	nav a {
 		padding: 1em 0.5em;
 		color: var(--black);
 		border-bottom: 4px solid transparent;
 		text-decoration: none;
 	}
+
 	nav a.active {
 		text-decoration: none;
 		border-bottom-color: var(--accent);
@@ -97,6 +114,7 @@ import { SITE_TITLE } from '../consts';
 		.internal-links {
 			flex-direction: column;
 		}
+
 		.dropdown-content {
 			position: static;
 			box-shadow: none;

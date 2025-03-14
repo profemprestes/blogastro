@@ -1,0 +1,67 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<BaseHead title="2° EMS | Educación Media Superior" description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>2° EMS - Educación Media Superior</h1>
+			<div class="course-grid">
+				<a href="/ems/programacion-avanzada" class="course-card">
+					<h2>Programación Avanzada</h2>
+					<p>Aprende conceptos avanzados de programación y desarrollo de software.</p>
+				</a>
+				<a href="/ems/base-datos" class="course-card">
+					<h2>Base de Datos</h2>
+					<p>Diseño, implementación y gestión de bases de datos.</p>
+				</a>
+				<a href="/ems/sistemas-operativos" class="course-card">
+					<h2>Sistemas Operativos</h2>
+					<p>Fundamentos y administración de sistemas operativos.</p>
+				</a>
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	.course-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+
+	.course-card {
+		background: white;
+		padding: 1.5rem;
+		border-radius: 8px;
+		box-shadow: var(--box-shadow);
+		text-decoration: none;
+		color: rgb(var(--gray-dark));
+		transition: transform 0.2s ease;
+	}
+
+	.course-card:hover {
+		transform: translateY(-4px);
+	}
+
+	.course-card h2 {
+		margin: 0 0 1rem 0;
+		color: var(--accent);
+	}
+
+	.course-card p {
+		margin: 0;
+		font-size: 0.9em;
+	}
+</style>

@@ -1,0 +1,50 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<BaseHead title="Base de Datos | 2° EMS" description="Curso de Base de Datos" />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>Base de Datos</h1>
+			<section class="content">
+				<h2>Descripción del Curso</h2>
+				<p>
+					Aprende los fundamentos de las bases de datos, diseño de esquemas,
+					normalización y gestión de datos.
+				</p>
+
+				<h2>Temas Principales</h2>
+				<ul>
+					<li>Modelado de datos</li>
+					<li>SQL y consultas avanzadas</li>
+					<li>Normalización de bases de datos</li>
+					<li>Gestión y administración</li>
+					<li>Seguridad de datos</li>
+				</ul>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	.content {
+		background: white;
+		padding: 2rem;
+		border-radius: 8px;
+		box-shadow: var(--box-shadow);
+	}
+
+	ul {
+		list-style-type: disc;
+		margin-left: 2rem;
+	}
+</style>

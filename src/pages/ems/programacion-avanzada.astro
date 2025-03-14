@@ -1,0 +1,50 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<BaseHead title="Programación Avanzada | 2° EMS" description="Curso de Programación Avanzada" />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>Programación Avanzada</h1>
+			<section class="content">
+				<h2>Descripción del Curso</h2>
+				<p>
+					Este curso está diseñado para desarrollar habilidades avanzadas en programación,
+					incluyendo estructuras de datos, algoritmos y paradigmas de programación.
+				</p>
+
+				<h2>Temas Principales</h2>
+				<ul>
+					<li>Estructuras de datos avanzadas</li>
+					<li>Algoritmos de búsqueda y ordenamiento</li>
+					<li>Programación orientada a objetos</li>
+					<li>Patrones de diseño</li>
+					<li>Desarrollo de aplicaciones</li>
+				</ul>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	.content {
+		background: white;
+		padding: 2rem;
+		border-radius: 8px;
+		box-shadow: var(--box-shadow);
+	}
+
+	ul {
+		list-style-type: disc;
+		margin-left: 2rem;
+	}
+</style>

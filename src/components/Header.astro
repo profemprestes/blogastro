@@ -1,0 +1,106 @@
+---
+import HeaderLink from './HeaderLink.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<header>
+	<nav>
+		<h2><a href="/">{SITE_TITLE}</a></h2>
+		<div class="internal-links">
+			<HeaderLink href="/">Principal</HeaderLink>
+			<div class="dropdown">
+				<HeaderLink href="/ems">2° EMS</HeaderLink>
+				<div class="dropdown-content">
+					<HeaderLink href="/ems/programacion-avanzada">Programación Avanzada</HeaderLink>
+					<HeaderLink href="/ems/base-datos">Base de Datos</HeaderLink>
+					<HeaderLink href="/ems/sistemas-operativos">Sistemas Operativos</HeaderLink>
+				</div>
+			</div>
+			<div class="dropdown">
+				<HeaderLink href="/ems3">3° EMS</HeaderLink>
+				<div class="dropdown-content">
+					<HeaderLink href="/ems3/full-stack">Programación Full Stack</HeaderLink>
+					<HeaderLink href="/ems3/ingenieria-software">Ingeniería de Software</HeaderLink>
+					<HeaderLink href="/ems3/admin-sistemas">Administración de Sistemas Operativos</HeaderLink>
+					<HeaderLink href="/ems3/utulab">Tutoría de Proyecto UTUlab</HeaderLink>
+				</div>
+			</div>
+		</div>
+	</nav>
+</header>
+<style>
+	header {
+		margin: 0;
+		padding: 0 1em;
+		background: white;
+		box-shadow: 0 2px 8px rgba(var(--black), 5%);
+	}
+	h2 {
+		margin: 0;
+		font-size: 1em;
+	}
+
+	h2 a,
+	h2 a.active {
+		text-decoration: none;
+	}
+	nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	nav a {
+		padding: 1em 0.5em;
+		color: var(--black);
+		border-bottom: 4px solid transparent;
+		text-decoration: none;
+	}
+	nav a.active {
+		text-decoration: none;
+		border-bottom-color: var(--accent);
+	}
+
+	.internal-links {
+		display: flex;
+		gap: 1em;
+	}
+
+	.dropdown {
+		position: relative;
+		display: inline-block;
+	}
+
+	.dropdown-content {
+		display: none;
+		position: absolute;
+		background-color: white;
+		min-width: 280px;
+		box-shadow: 0 8px 16px rgba(var(--black), 10%);
+		z-index: 1;
+		border-radius: 4px;
+	}
+
+	.dropdown-content a {
+		display: block;
+		padding: 0.5em 1em;
+	}
+
+	.dropdown:hover .dropdown-content {
+		display: block;
+	}
+
+	.dropdown-content a:hover {
+		background-color: rgb(var(--gray-light));
+	}
+
+	@media (max-width: 720px) {
+		.internal-links {
+			flex-direction: column;
+		}
+		.dropdown-content {
+			position: static;
+			box-shadow: none;
+			padding-left: 1em;
+		}
+	}
+</style>

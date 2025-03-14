@@ -1,0 +1,338 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<section class="hero">
+				<div class="hero-content animate-fade-in">
+					<h1>Bienvenidos a {SITE_TITLE}</h1>
+					<p class="subtitle">Plan para la Educación Media Superior 2023 - DGETP | Tecnologías de la Información</p>
+					<div class="hero-animation">
+						<i class="fas fa-laptop-code"></i>
+						<i class="fas fa-database"></i>
+						<i class="fas fa-server"></i>
+					</div>
+				</div>
+			</section>
+
+			<section class="courses">
+				<div class="year-section animate-slide-up">
+					<h2>2do. Año EMS</h2>
+					<div class="course-grid">
+						<div class="course-card">
+							<div class="card-icon">
+								<i class="fas fa-code"></i>
+							</div>
+							<img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500&auto=format&fit=crop&q=80" alt="Programación" class="card-image" />
+							<h3>Programación Avanzada</h3>
+							<ul class="course-features">
+								<li><i class="fas fa-check"></i> Estructuras de datos</li>
+								<li><i class="fas fa-check"></i> Algoritmos avanzados</li>
+								<li><i class="fas fa-check"></i> POO</li>
+							</ul>
+							<a href="/ems/programacion-avanzada" class="btn">Ver más</a>
+						</div>
+						<div class="course-card">
+							<div class="card-icon">
+								<i class="fas fa-database"></i>
+							</div>
+							<img src="https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=500&auto=format&fit=crop&q=80" alt="Base de Datos" class="card-image" />
+							<h3>Introducción a Base de Datos</h3>
+							<ul class="course-features">
+								<li><i class="fas fa-check"></i> Diseño de BD</li>
+								<li><i class="fas fa-check"></i> SQL</li>
+								<li><i class="fas fa-check"></i> Normalización</li>
+							</ul>
+							<a href="/ems/base-datos" class="btn">Ver más</a>
+						</div>
+						<div class="course-card">
+							<div class="card-icon">
+								<i class="fas fa-microchip"></i>
+							</div>
+							<img src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?w=500&auto=format&fit=crop&q=80" alt="Sistemas Operativos" class="card-image" />
+							<h3>Sistemas Operativos</h3>
+							<ul class="course-features">
+								<li><i class="fas fa-check"></i> Arquitectura</li>
+								<li><i class="fas fa-check"></i> Gestión de procesos</li>
+								<li><i class="fas fa-check"></i> Seguridad</li>
+							</ul>
+							<a href="/ems/sistemas-operativos" class="btn">Ver más</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="year-section animate-slide-up">
+					<h2>3er. Año EMS</h2>
+					<div class="course-grid">
+						<div class="course-card">
+							<div class="card-icon">
+								<i class="fas fa-layer-group"></i>
+							</div>
+							<img src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=500&auto=format&fit=crop&q=80" alt="Full Stack" class="card-image" />
+							<h3>Programación Full Stack</h3>
+							<ul class="course-features">
+								<li><i class="fas fa-check"></i> Frontend</li>
+								<li><i class="fas fa-check"></i> Backend</li>
+								<li><i class="fas fa-check"></i> APIs</li>
+							</ul>
+						</div>
+						<div class="course-card">
+							<div class="card-icon">
+								<i class="fas fa-cogs"></i>
+							</div>
+							<img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=500&auto=format&fit=crop&q=80" alt="Ingeniería de Software" class="card-image" />
+							<h3>Ingeniería de Software</h3>
+							<ul class="course-features">
+								<li><i class="fas fa-check"></i> Metodologías</li>
+								<li><i class="fas fa-check"></i> Testing</li>
+								<li><i class="fas fa-check"></i> DevOps</li>
+							</ul>
+						</div>
+						<div class="course-card">
+							<div class="card-icon">
+								<i class="fas fa-server"></i>
+							</div>
+							<img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=500&auto=format&fit=crop&q=80" alt="Administración SO" class="card-image" />
+							<h3>Administración de Sistemas Operativos</h3>
+							<ul class="course-features">
+								<li><i class="fas fa-check"></i> Redes</li>
+								<li><i class="fas fa-check"></i> Servicios</li>
+								<li><i class="fas fa-check"></i> Monitoreo</li>
+							</ul>
+						</div>
+						<div class="course-card">
+							<div class="card-icon">
+								<i class="fas fa-project-diagram"></i>
+							</div>
+							<img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&auto=format&fit=crop&q=80" alt="UTUlab" class="card-image" />
+							<h3>Tutoría de Proyecto UTUlab</h3>
+							<ul class="course-features">
+								<li><i class="fas fa-check"></i> Gestión</li>
+								<li><i class="fas fa-check"></i> Desarrollo</li>
+								<li><i class="fas fa-check"></i> Presentación</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	@keyframes fadeIn {
+		from { opacity: 0; }
+		to { opacity: 1; }
+	}
+
+	@keyframes slideUp {
+		from { transform: translateY(50px); opacity: 0; }
+		to { transform: translateY(0); opacity: 1; }
+	}
+
+	@keyframes float {
+		0% { transform: translateY(0px); }
+		50% { transform: translateY(-10px); }
+		100% { transform: translateY(0px); }
+	}
+
+	.animate-fade-in {
+		animation: fadeIn 1s ease-out;
+	}
+
+	.animate-slide-up {
+		animation: slideUp 1s ease-out;
+	}
+
+	.hero {
+		text-align: center;
+		padding: 4rem 1rem;
+		background: linear-gradient(135deg, var(--accent-dark), var(--accent));
+		color: white;
+		border-radius: 0 0 2rem 2rem;
+		margin-bottom: 3rem;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.hero::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: linear-gradient(45deg, rgba(255,255,255,0.1) 25%, transparent 25%),
+					linear-gradient(-45deg, rgba(255,255,255,0.1) 25%, transparent 25%);
+		background-size: 60px 60px;
+		animation: fadeIn 2s ease-out;
+	}
+
+	.hero-content {
+		position: relative;
+		z-index: 1;
+	}
+
+	.hero h1 {
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+		color: white;
+		text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+	}
+
+	.hero-animation {
+		margin-top: 2rem;
+	}
+
+	.hero-animation i {
+		font-size: 2.5rem;
+		margin: 0 1rem;
+		animation: float 3s ease-in-out infinite;
+	}
+
+	.hero-animation i:nth-child(2) {
+		animation-delay: 0.5s;
+	}
+
+	.hero-animation i:nth-child(3) {
+		animation-delay: 1s;
+	}
+
+	.subtitle {
+		font-size: 1.2rem;
+		opacity: 0.9;
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.year-section {
+		margin-bottom: 4rem;
+	}
+
+	.year-section h2 {
+		color: var(--accent-dark);
+		margin-bottom: 2rem;
+		padding-bottom: 0.5rem;
+		border-bottom: 2px solid var(--accent);
+		position: relative;
+	}
+
+	.year-section h2::after {
+		content: '';
+		position: absolute;
+		bottom: -2px;
+		left: 0;
+		width: 100px;
+		height: 2px;
+		background: var(--accent-dark);
+	}
+
+	.course-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		margin-top: 1rem;
+	}
+
+	.course-card {
+		background: white;
+		padding: 1.5rem;
+		border-radius: 1rem;
+		box-shadow: var(--box-shadow);
+		transition: all 0.3s ease;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.course-card:hover {
+		transform: translateY(-4px);
+		box-shadow: 0 12px 20px rgba(var(--gray), 20%);
+	}
+
+	.card-icon {
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		font-size: 1.5rem;
+		color: var(--accent);
+		opacity: 0.8;
+	}
+
+	.card-image {
+		width: 100%;
+		height: 150px;
+		object-fit: cover;
+		border-radius: 0.5rem;
+		margin-bottom: 1rem;
+	}
+
+	.course-card h3 {
+		color: var(--accent);
+		margin-bottom: 1rem;
+		font-size: 1.3rem;
+	}
+
+	.course-features {
+		list-style: none;
+		padding: 0;
+		margin: 0 0 1.5rem 0;
+	}
+
+	.course-features li {
+		margin-bottom: 0.5rem;
+		color: rgb(var(--gray-dark));
+	}
+
+	.course-features i {
+		color: var(--accent);
+		margin-right: 0.5rem;
+	}
+
+	.btn {
+		display: inline-block;
+		padding: 0.5rem 1.5rem;
+		background: var(--accent);
+		color: white;
+		text-decoration: none;
+		border-radius: 2rem;
+		transition: all 0.3s ease;
+		border: 2px solid var(--accent);
+	}
+
+	.btn:hover {
+		background: var(--accent-dark);
+		border-color: var(--accent-dark);
+		transform: scale(1.05);
+	}
+
+	@media (max-width: 720px) {
+		.hero h1 {
+			font-size: 2rem;
+		}
+
+		.subtitle {
+			font-size: 1rem;
+		}
+
+		.course-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.hero-animation i {
+			font-size: 2rem;
+			margin: 0 0.5rem;
+		}
+	}
+</style>

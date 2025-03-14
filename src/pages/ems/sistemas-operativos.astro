@@ -1,0 +1,50 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<BaseHead title="Sistemas Operativos | 2° EMS" description="Curso de Sistemas Operativos" />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>Sistemas Operativos</h1>
+			<section class="content">
+				<h2>Descripción del Curso</h2>
+				<p>
+					Explora los conceptos fundamentales de los sistemas operativos, su arquitectura
+					y administración.
+				</p>
+
+				<h2>Temas Principales</h2>
+				<ul>
+					<li>Arquitectura de sistemas operativos</li>
+					<li>Gestión de procesos y memoria</li>
+					<li>Sistemas de archivos</li>
+					<li>Seguridad y permisos</li>
+					<li>Administración de recursos</li>
+				</ul>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	.content {
+		background: white;
+		padding: 2rem;
+		border-radius: 8px;
+		box-shadow: var(--box-shadow);
+	}
+
+	ul {
+		list-style-type: disc;
+		margin-left: 2rem;
+	}
+</style>
